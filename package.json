@@ -1,0 +1,40 @@
+{
+  "name": "travel-genie",
+  "version": "1.0.0",
+  "description": "AI-Powered Travel Companion - MERN Stack Application",
+  "scripts": {
+    "dev": "concurrently \"npm run server:dev\" \"npm run client:dev\"",
+    "client:dev": "cd client && npm run dev",
+    "server:dev": "cd server && npm run dev",
+    "client:build": "cd client && npm run build",
+    "server:start": "cd server && npm start",
+    "install:all": "npm install && cd client && npm install && cd ../server && npm install",
+    "build": "cd client && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "travel",
+    "ai",
+    "mern",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express",
+    "maps",
+    "pwa"
+  ],
+  "author": "Travel Genie Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiveshmishra46/travel-genie.git"
+  },
+  "homepage": "https://github.com/shiveshmishra46/travel-genie#readme"
+}
