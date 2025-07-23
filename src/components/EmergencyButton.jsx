@@ -112,31 +112,34 @@ This message was sent automatically by Travel Genie Emergency System.`
 
           {/* Emergency Contacts */}
           <div className="space-y-2">
-            {emergencyContacts.map((contact) => (
-              <div
-                key={contact.id}
-                className="flex items-center justify-between p-3 bg-muted rounded-lg"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="p-2 bg-primary/10 rounded-lg">
-                    <contact.icon size={16} className="text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-sm">{contact.name}</p>
-                    <p className="text-xs text-muted-foreground">{contact.number}</p>
-                  </div>
-                </div>
-                <Button
-                  onClick={() => handleEmergencyCall(contact)}
-                  size="sm"
-                  variant="outline"
-                  className="text-xs"
+            {emergencyContacts.map((contact) => {
+              const IconComponent = contact.icon
+              return (
+                <div
+                  key={contact.id}
+                  className="flex items-center justify-between p-3 bg-muted rounded-lg"
                 >
-                  <Phone size={14} className="mr-1" />
-                  Call
-                </Button>
-              </div>
-            ))}
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 bg-primary/10 rounded-lg">
+                      <IconComponent size={16} className="text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-medium text-sm">{contact.name}</p>
+                      <p className="text-xs text-muted-foreground">{contact.number}</p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={() => handleEmergencyCall(contact)}
+                    size="sm"
+                    variant="outline"
+                    className="text-xs"
+                  >
+                    <Phone size={14} className="mr-1" />
+                    Call
+                  </Button>
+                </div>
+              )
+            })}
           </div>
 
           {/* Add Custom Contact */}
